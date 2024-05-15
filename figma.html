@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background:whitesmoke;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background: black;
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+    border-bottom: 5px solid #6a0dad;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+nav {
+    display: flex;
+    gap: 1em;
+}
+
+.nav-btn {
+    background: none;
+    border: 2px solid #6a0dad;
+    color: #6a0dad;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-btn:hover {
+    background: #6a0dad;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: white;
+}
+
+header h1 span {
+    color: #6a0dad;
+}
+
+header .cta-btn {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.75em 1.5em;
+    background: #6a0dad;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+header .stats {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1.5em;
+}
+
+header .stats div {
+    font-size: 1.2em;
+    color: white;
+}
+
+section.curriculum {
+    background: lightslategrey;
+    padding: 2em 0;
+    text-align: center;
+}
+
+section.curriculum h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: whitesmoke;
+}
+
+section.curriculum ul {
+    list-style-type: none;
+}
+
+section.curriculum ul li {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: white;
+}
+
+section.limited-time {
+    background: lightblue;
+    padding: 2em 0;
+    text-align: center;
+}
+
+section.limited-time h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+section.limited-time .cta-btn {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.75em 1.5em;
+    background: #6a0dad;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section.limited-time .how-it-works {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1.5em;
+   
+}
+
+section.limited-time .how-it-works div {
+    font-size: 1.2em;
+    color: #555;
+}
+
+section.companies {
+    background: bisque;
+    padding: 2em 0;
+    text-align: center;
+}
+
+section.companies h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+section.companies .logos {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+section.companies .logos img {
+    max-width: 100px;
+}
+
+section.certificates {
+    background: beige;
+    padding: 2em 0;
+    text-align: center;
+}
+
+section.certificates h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+section.certificates .details {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1.5em;
+    flex-wrap: wrap;
+}
+
+section.certificates .details div {
+    font-size: 1.2em;
+    color: #555;
+    flex: 1;
+    min-width: 250px;
+}
+
+section.pricing {
+    background: #fff;
+    padding: 2em 0;
+    text-align: center;
+}
+
+section.pricing .pricing-option {
+    background: blueviolet;
+    
+    padding: 1.5em;
+    margin: 1em 0;
+    border-radius: 5px;
+}
+
+section.pricing .pricing-option.purple {
+    background: #6a0dad;
+    color: #fff;
+}
+
+section.pricing .pricing-option h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+section.pricing .pricing-option.purple h3,
+section.pricing .pricing-option.purple p {
+    color: #fff;
+}
+
+section.pricing .pricing-option p {
+    margin: 1em 0;
+    color: #555;
+}
+
+section.pricing .pricing-option .cta-btn {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background: #6a0dad;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section.pricing .pricing-option.purple .cta-btn {
+    background: purple;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    header .stats {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    section.limited-time .how-it-works {
+        flex-direction: column;
+    }
+
+    section.certificates .details {
+        flex-direction: column;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <img src="https://s3-alpha.figma.com/hub/file/1166690750/85f69649-5387-44c2-ba45-81ae13812e36-cover.png" alt="Logo" class="logo">
+                <nav>
+                    <a href="#" class="nav-btn">Sign In</a>
+                    <a href="#" class="nav-btn">Login</a>
+                </nav>
+            </div>
+            <h1>Become an Expert in the field of <span>Data Science</span> with 6 courses</h1>
+            <a href="#" class="cta-btn">Apply Now</a>
+            <div class="stats">
+                <div>24/7 Support</div>
+                <div>6 Courses</div>
+                <div>100K+ Students</div>
+            </div>
+        </div>
+    </header>
+    <section class="curriculum">
+        <div class="container">
+            <h2>Data Science Course Curriculum</h2>
+            <ul>
+                <li>Course 1</li>
+                <li>Course 2</li>
+                <li>Course 3</li>
+                <li>Course 4</li>
+                <li>Course 5</li>
+                <li>Course 6</li>
+            </ul>
+        </div>
+    </section>
+    <section class="limited-time">
+        <div class="container">
+            <h2>Don't miss out on this limited-time opportunity to learn for Free!</h2>
+            <a href="#" class="cta-btn">Start Learning Free</a>
+            <div class="how-it-works">
+                <div>
+                    <h3>How does it work?</h3>
+                    <p>Complete the courses and get certified.</p>
+                </div>
+                <div>
+                    <h3>Unlock Your Potential</h3>
+                    <p>Gain skills and land a job in top companies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="companies">
+        <div class="container">
+            <h2>Top Companies Hiring Data Scientists</h2>
+            <div class="logos">
+                <img src="https://yt3.googleusercontent.com/_WN_fzJXvnAndAcaxQhLBeuyrTTbY69R3u6OgurfkdF45HCiFW6soVqtCopJT4PL3ystY7vb=s900-c-k-c0x00ffffff-no-rj" alt="Company 1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCzLOkkqnMC4mWlD6LVHD8XBkjiuQqtZQ4qj6f407NOA&s" alt="Company 2">
+                <img src="https://w7.pngwing.com/pngs/157/702/png-transparent-wipro-logo-business-corporate-identity-business-text-service-people-thumbnail.png" alt="Company 3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Company 4">
+            </div>
+        </div>
+    </section>
+    <section class="certificates">
+        <div class="container">
+            <h2>Unlock 6 Certificates & Internship Opportunities!</h2>
+            <div class="details">
+                <div>
+                    <h3>Get 6 Industry Recognized Certificates</h3>
+                    <p>Enhance your resume and stand out to employers.</p>
+                </div>
+                <div>
+                    <h3>Internship Opportunities</h3>
+                    <p>Get real-world experience and improve your skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pricing">
+        <div class="container">
+            <div class="pricing-option">
+                <h3>Enroll For Data Science Bundle @ ₹1,499</h3>
+                <p>Get access to all 6 courses.</p>
+                <a href="#" class="cta-btn">Enroll Now</a>
+            </div>
+            <div class="pricing-option purple">
+                <h3>Enroll For Data Science Bundle @ ₹1,499</h3>
+                <p>Get access to all 6 courses plus certificates.</p>
+                <a href="#" class="cta-btn">Enroll Now</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
